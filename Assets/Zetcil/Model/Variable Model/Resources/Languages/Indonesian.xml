@@ -90,6 +90,14 @@
 		<Puzzle>PUZZLE</Puzzle>
     </UIGroup>
 	
+	<InformationGroup>
+		<LoginFailed>Login gagal! Periksa username dan password anda!</LoginFailed>
+		<UserCreateExists>Nama user sudah digunakan!</UserCreateExists>
+		<UserCreateSuccess>Proses registrasi user berhasil!</UserCreateSuccess>
+		<UserCreateFailure>Proses registrasi user gagal! Pastikan anda terhubung internet dan hanya membuat password dengan karakter: A-Z, a-z, 1-9</UserCreateFailure>
+		<PasswordNotSame>Password dan konfirmasi password tidak sama!</PasswordNotSame>
+	</InformationGroup>
+	
 	<MessageGroup>
 		<CreateLobby>Buat Lobby</CreateLobby>
 		<CreateRoom>Buat Room</CreateRoom>	

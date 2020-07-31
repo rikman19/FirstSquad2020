@@ -97,12 +97,25 @@ namespace Zetcil
                     UserID.CurrentValue = resLogin[1];
                     UserEmail.CurrentValue = resLogin[2];
                     UserPassword.CurrentValue = resLogin[3];
-                    UserScore.CurrentValue = float.Parse(resLogin[4]);
-                    UserEnergy.CurrentValue = float.Parse(resLogin[5]);
-                    UserCoin.CurrentValue = float.Parse(resLogin[6]);
-                    UserDiamond.CurrentValue = float.Parse(resLogin[7]);
+                    UserScore.CurrentValue = ToFloat(resLogin[4]);
+                    UserEnergy.CurrentValue = ToFloat(resLogin[5]);
+                    UserCoin.CurrentValue = ToFloat(resLogin[6]);
+                    UserDiamond.CurrentValue = ToFloat(resLogin[7]);
                 }
             }
+        }
+
+        float ToFloat(string aValue)
+        {
+            float result = 0;
+            if (aValue == "")
+            {
+                result = 0;
+            } else 
+            {
+                result = float.Parse(aValue);
+            }
+            return result;
         }
 
         public void LoginFailed()

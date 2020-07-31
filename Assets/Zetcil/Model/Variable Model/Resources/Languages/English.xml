@@ -90,6 +90,14 @@
 		<Puzzle>PUZZLE</Puzzle>
 	</UIGroup>
 
+	<InformationGroup>
+		<LoginFailed>Login failed! Check your username and password!</LoginFailed>
+		<UserCreateExists>Username already exists!</UserCreateExists>
+		<UserCreateSuccess>User registration success!</UserCreateSuccess>
+		<UserCreateFailure>User registration failed! Make sure you're connected to internet and only make a password with those character: A-Z, a-z, 1-9</UserCreateFailure>
+		<PasswordNotSame>Password confirmation is invalid!</PasswordNotSame>
+	</InformationGroup>
+
 	<MessageGroup>
 		<CreateLobby>Create Lobby</CreateLobby>
 		<CreateRoom>Create Room</CreateRoom>
