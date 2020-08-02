@@ -723,5 +723,10 @@ namespace Zetcil
         {
             isLessInvoke = false;
         }
+
+        public void SetChecking(bool aValue)
+        {
+            isChecking = aValue;
+        }
     }
 }

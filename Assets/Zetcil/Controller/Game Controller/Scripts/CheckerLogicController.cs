@@ -711,5 +711,11 @@ namespace Zetcil
             ExecuteEvent();
         }
 
+        public void SetChecking(bool aValue)
+        {
+            isChecking = aValue;
+        }
+
+
     }
 }

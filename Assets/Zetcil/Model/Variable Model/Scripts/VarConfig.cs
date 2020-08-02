@@ -285,6 +285,12 @@ namespace Zetcil
                 SaveDataSessionFile("Default.CurrentID", dataAsset.ToString());
             }
 
+            dataAsset = (TextAsset)Resources.Load(DataSessionDirectory + "/Default.CurrentPassword", typeof(TextAsset));
+            if (!IsSessionExists(DataSessionDirectory, "Default.CurrentPassword"))
+            {
+                SaveDataSessionFile("Default.CurrentPassword", dataAsset.ToString());
+            }
+
             dataAsset = (TextAsset)Resources.Load(DataSessionDirectory + "/Default.CurrentLevel", typeof(TextAsset));
             if (!IsSessionExists(DataSessionDirectory, "Default.CurrentLevel"))
             {
@@ -319,6 +325,12 @@ namespace Zetcil
             if (!IsSessionExists(DataSessionDirectory, "Default.CurrentDiamond"))
             {
                 SaveDataSessionFile("Default.CurrentDiamond", dataAsset.ToString());
+            }
+
+            dataAsset = (TextAsset)Resources.Load(DataSessionDirectory + "/Default.CurrentStar", typeof(TextAsset));
+            if (!IsSessionExists(DataSessionDirectory, "Default.CurrentStar"))
+            {
+                SaveDataSessionFile("Default.CurrentStar", dataAsset.ToString());
             }
 
             dataAsset = (TextAsset)Resources.Load(DataSessionDirectory + "/Default.CurrentCharacter", typeof(TextAsset));

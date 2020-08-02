@@ -2,16 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TechnomediaLabs;
 
 namespace Zetcil
 {
-    public class SessionScoreRow : MonoBehaviour
+    public class UIInput : MonoBehaviour
     {
 
-        public Text CaptionNo;
-        public Text CaptionID;
-        public Text CaptionName;
-        public Text CaptionScore;
+        public InputField TargetInputField;
+
+        public void SetText(VarString aText)
+        {
+            TargetInputField.text = aText.CurrentValue;
+        }
 
         // Start is called before the first frame update
         void Start()

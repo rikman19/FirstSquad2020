@@ -13,7 +13,7 @@ namespace Zetcil
         public bool isEnabled;
 
         [Header("Login Settings")]
-        public string MainURL;
+        public VarString MainURL;
         [HideInInspector] public string SubmitURL;
 
         [Header("Variable Settings")]
@@ -40,14 +40,16 @@ namespace Zetcil
                 PasswordConfirmationEvent.Invoke();
             } else
             {
-                SubmitURL = MainURL + "/" + ID.text +
+                SubmitURL = MainURL.CurrentValue + 
+                           "/" + ID.text +
                            "/" + Email.text +
                            "/" + Nickname.text +
                            "/" + Password.text +
                            "/0" + //default score = 0
-                           "/100" + //default energy = 100
+                           "/120" + //default energy = 120
                            "/0" + //default coin = 0
-                           "/0"; //default diamond = 0
+                           "/0" + //default diamond = 0
+                            "/0"; //default star = 0
                 StartCoroutine(StartPHPRequest());
             }
         }

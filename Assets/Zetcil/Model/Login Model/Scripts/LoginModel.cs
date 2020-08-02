@@ -13,7 +13,7 @@ namespace Zetcil
         public bool isEnabled;
 
         [Header("Login Settings")]
-        public string MainURL;
+        public VarString MainURL;
         [HideInInspector] public string SubmitURL;
 
         [Header("Variable Settings")]
@@ -32,11 +32,14 @@ namespace Zetcil
         public bool usingUserOutput;
         public VarString UserID;
         public VarString UserEmail;
+        public VarString UserNickname;
         public VarString UserPassword;
         public VarScore UserScore;
-        public VarFloat UserEnergy;
-        public VarFloat UserCoin;
-        public VarFloat UserDiamond;
+        public VarInteger UserEnergy;
+        public VarInteger UserCoin;
+        public VarInteger UserDiamond;
+        public VarInteger UserStar;
+        public UnityEvent SessionEvent;
 
         public void InvokeAdminLogin()
         {
@@ -51,7 +54,7 @@ namespace Zetcil
 
         public void InvokeLogin()
         {
-            SubmitURL = MainURL + 
+            SubmitURL = MainURL.CurrentValue + 
                        "/" + ID.text +
                        "/" + Password.text;
             StartCoroutine(StartPHPRequest());
@@ -96,11 +99,15 @@ namespace Zetcil
                 {
                     UserID.CurrentValue = resLogin[1];
                     UserEmail.CurrentValue = resLogin[2];
-                    UserPassword.CurrentValue = resLogin[3];
-                    UserScore.CurrentValue = ToFloat(resLogin[4]);
-                    UserEnergy.CurrentValue = ToFloat(resLogin[5]);
-                    UserCoin.CurrentValue = ToFloat(resLogin[6]);
-                    UserDiamond.CurrentValue = ToFloat(resLogin[7]);
+                    UserNickname.CurrentValue = resLogin[3];
+                    UserPassword.CurrentValue = resLogin[4];
+                    UserScore.CurrentValue = ToInteger(resLogin[5]);
+                    UserEnergy.CurrentValue = ToInteger(resLogin[6]);
+                    UserCoin.CurrentValue = ToInteger(resLogin[7]);
+                    UserDiamond.CurrentValue = ToInteger(resLogin[8]);
+                    UserStar.CurrentValue = ToInteger(resLogin[9]);
+
+                    SessionEvent.Invoke();
                 }
             }
         }
@@ -114,6 +121,20 @@ namespace Zetcil
             } else 
             {
                 result = float.Parse(aValue);
+            }
+            return result;
+        }
+
+        int ToInteger(string aValue)
+        {
+            int result = 0;
+            if (aValue == "")
+            {
+                result = 0;
+            }
+            else
+            {
+                result = int.Parse(aValue);
             }
             return result;
         }

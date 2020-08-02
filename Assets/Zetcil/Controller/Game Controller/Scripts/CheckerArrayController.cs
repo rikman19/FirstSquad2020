@@ -403,5 +403,10 @@ namespace Zetcil
             }
         }
 
+        public void SetChecking(bool aValue)
+        {
+            isChecking = aValue;
+        }
+
     }
 }
