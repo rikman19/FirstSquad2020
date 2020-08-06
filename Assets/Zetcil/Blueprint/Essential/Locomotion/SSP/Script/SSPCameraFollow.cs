@@ -13,7 +13,8 @@ public class SSPCameraFollow : MonoBehaviour
     [Header("Movement Settings")]
     public Vector3 specificVector;
     public float smoothSpeed;
-  
+    public float offsetY = 2;
+
     void Start()
     {
         CameraController.transform.parent = null;
@@ -23,14 +24,14 @@ public class SSPCameraFollow : MonoBehaviour
     {
         if (isEnabled)
         {
-            if (CameraController.transform.position.y < transform.position.y - 2)
+            if (CameraController.transform.position.y < transform.position.y - offsetY)
             {
-                specificVector = new Vector3(transform.position.x, transform.position.y - 2, CameraController.transform.position.z);
+                specificVector = new Vector3(transform.position.x, transform.position.y - offsetY, CameraController.transform.position.z);
                 CameraController.transform.position = Vector3.Lerp(CameraController.transform.position, specificVector, smoothSpeed * Time.deltaTime);
             }
-            else if (CameraController.transform.position.y > transform.position.y + 2)
+            else if (CameraController.transform.position.y > transform.position.y + offsetY)
             {
-                specificVector = new Vector3(transform.position.x, transform.position.y + 2, CameraController.transform.position.z);
+                specificVector = new Vector3(transform.position.x, transform.position.y + offsetY, CameraController.transform.position.z);
                 CameraController.transform.position = Vector3.Lerp(CameraController.transform.position, specificVector, smoothSpeed * Time.deltaTime);
             }
             else

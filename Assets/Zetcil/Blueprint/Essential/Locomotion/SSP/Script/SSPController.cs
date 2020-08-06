@@ -52,13 +52,18 @@ namespace Zetcil
             }
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
-                if (isGrounded)
-                {
-                    isGrounded = false;
-                    rigidbody2D.AddForce(Vector3.up * jumpSpeed);
-                }
-                Invoke("Cooldown", 1);
+                InvokeJump();
             }
+        }
+
+        public void InvokeJump()
+        {
+            if (isGrounded)
+            {
+                isGrounded = false;
+                rigidbody2D.AddForce(Vector3.up * jumpSpeed);
+            }
+            Invoke("Cooldown", 1);
         }
 
         void Cooldown()

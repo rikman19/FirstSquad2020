@@ -15,6 +15,35 @@ TagManager:
   - UICharSelection
   - UDialog
   - UIBanner
+  - Bad
+  - Good
+  - BGM
+  - LetterA
+  - LetterB
+  - LetterC
+  - LetterD
+  - LetterE
+  - LetterF
+  - LetterG
+  - LetterH
+  - LetterI
+  - LetterJ
+  - LetterK
+  - LetterL
+  - LetterM
+  - LetterN
+  - LetterO
+  - LetterP
+  - LetterQ
+  - LetterR
+  - LetterS
+  - LetterT
+  - LetterU
+  - LetterV
+  - LetterW
+  - LetterX
+  - LetterY
+  - LetterZ
   layers:
   - Default
   - TransparentFX

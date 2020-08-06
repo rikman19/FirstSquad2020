@@ -25,7 +25,7 @@ namespace TechnomediaLabs.Internal
 			IsEnabled = !IsEnabled;
 		}
 
-		[MenuItem(MenuItemName, true)]
+		[MenuItem(MenuItemName, false)]
 		private static bool MenuItemValidation()
 		{
 			Menu.SetChecked(MenuItemName, IsEnabled);
@@ -80,9 +80,9 @@ namespace TechnomediaLabs.Internal
 
 		private static void DeleteEmptyDirectory(DirectoryInfo emptyDirectory)
 		{
-			var relativePath = GetRelativePath(emptyDirectory.FullName, Directory.GetCurrentDirectory());
-			AssetDatabase.MoveAssetToTrash(relativePath);
-			Debug.Log("Empty directory removed at: " + emptyDirectory.FullName);
+			//var relativePath = GetRelativePath(emptyDirectory.FullName, Directory.GetCurrentDirectory());
+			//AssetDatabase.MoveAssetToTrash(relativePath);
+			//Debug.Log("Empty directory removed at: " + emptyDirectory.FullName);
 		}
 
 
