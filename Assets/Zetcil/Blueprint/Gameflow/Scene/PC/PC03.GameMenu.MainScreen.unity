@@ -9257,10 +9257,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3628533460843689690, guid: abbf5b525574f1246a51ba1f5ccab39c,
+        type: 3}
+      propertyPath: CurrentValue
+      value: https://gamesfq.linknet.co.id/cube/index.php/gameuser/register
+      objectReference: {fileID: 0}
+    - target: {fileID: 3628533460998107375, guid: abbf5b525574f1246a51ba1f5ccab39c,
+        type: 3}
+      propertyPath: CurrentValue
+      value: https://gamesfq.linknet.co.id/cube/index.php/gameuser/login
+      objectReference: {fileID: 0}
     - target: {fileID: 3628533461095020928, guid: abbf5b525574f1246a51ba1f5ccab39c,
         type: 3}
       propertyPath: CurrentValue
-      value: http://plutopersada.com/linknet/atom/index.php/gameuser/highscore/100
+      value: https://gamesfq.linknet.co.id/cube/index.php/gameuser/highscore
+      objectReference: {fileID: 0}
+    - target: {fileID: 3628533461095020928, guid: abbf5b525574f1246a51ba1f5ccab39c,
+        type: 3}
+      propertyPath: isEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3729955870172928628, guid: abbf5b525574f1246a51ba1f5ccab39c,
+        type: 3}
+      propertyPath: OperationType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6370057260457684810, guid: abbf5b525574f1246a51ba1f5ccab39c,
         type: 3}
