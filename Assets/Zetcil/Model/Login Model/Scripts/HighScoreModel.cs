@@ -49,7 +49,6 @@ namespace Zetcil
 
             if (webRequest.isNetworkError)
             {
-                Debugger.Save(webRequest.error);
                 if (PrintDebugConsole)
                 {
                     Debug.Log(SubmitURL);
@@ -60,7 +59,6 @@ namespace Zetcil
             {
                 RequestOutput.CurrentValue = webRequest.downloadHandler.text;
                 LoadHighScore();
-                Debugger.Save(webRequest.downloadHandler.text);
                 if (PrintDebugConsole)
                 {
                     Debug.Log(SubmitURL);
