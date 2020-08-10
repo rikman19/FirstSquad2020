@@ -7629,6 +7629,11 @@ PrefabInstance:
       propertyPath: m_InputType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6586666086246277502, guid: 31b01204630044f429d424d975e34acd,
+        type: 3}
+      propertyPath: m_Text
+      value: NICKNAME
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31b01204630044f429d424d975e34acd, type: 3}
 --- !u!224 &1225118472 stripped
@@ -8488,6 +8493,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: LOGIN LINK NET SERVER
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1344000835549680922}
+        m_MethodName: SaveFile
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
   usingToggleOff: 0
@@ -9666,7 +9682,7 @@ PrefabInstance:
     - target: {fileID: 114559040775882532, guid: 1aca0de7c23746a4f8f4c52be6ded897,
         type: 3}
       propertyPath: usingNotEqualCondition
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114559040775882532, guid: 1aca0de7c23746a4f8f4c52be6ded897,
         type: 3}
@@ -9811,7 +9827,7 @@ PrefabInstance:
     - target: {fileID: 114559040775882532, guid: 1aca0de7c23746a4f8f4c52be6ded897,
         type: 3}
       propertyPath: RepeatChecking
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114559040775882532, guid: 1aca0de7c23746a4f8f4c52be6ded897,
         type: 3}
@@ -10187,6 +10203,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1423569591411975241, guid: fa6a6af995dd4e444892286eb7041db6,
+        type: 3}
+      propertyPath: m_Text
+      value: ID
       objectReference: {fileID: 0}
     - target: {fileID: 1423569591513599792, guid: fa6a6af995dd4e444892286eb7041db6,
         type: 3}
@@ -12012,17 +12033,17 @@ PrefabInstance:
     - target: {fileID: 3729955870172928628, guid: abbf5b525574f1246a51ba1f5ccab39c,
         type: 3}
       propertyPath: OperationType
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3729955870172928628, guid: abbf5b525574f1246a51ba1f5ccab39c,
         type: 3}
       propertyPath: isEnabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3729955870172928628, guid: abbf5b525574f1246a51ba1f5ccab39c,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6370057260457684810, guid: abbf5b525574f1246a51ba1f5ccab39c,
         type: 3}
@@ -12101,6 +12122,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abbf5b525574f1246a51ba1f5ccab39c, type: 3}
+--- !u!114 &1344000835549680922 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3729955870172928628, guid: abbf5b525574f1246a51ba1f5ccab39c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1344000835549680921}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b9cc877110c687419491cf3ed28f2f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1476782267292963142
 GameObject:
   m_ObjectHideFlags: 0
@@ -12939,6 +12972,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: LOGIN BARAYA SERVER
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1344000835549680922}
+        m_MethodName: SaveFile
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
   usingToggleOff: 0

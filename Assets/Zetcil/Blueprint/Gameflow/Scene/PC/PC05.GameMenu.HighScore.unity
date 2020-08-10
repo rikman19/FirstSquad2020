@@ -3371,7 +3371,7 @@ PrefabInstance:
     - target: {fileID: 2406521689496729271, guid: c6af7974fc80f4747b1e12513e6bd3b7,
         type: 3}
       propertyPath: OperationType
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5386345801692316553, guid: c6af7974fc80f4747b1e12513e6bd3b7,
         type: 3}
@@ -4107,7 +4107,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1332280937}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.5079607
+  m_Size: 0.50796074
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

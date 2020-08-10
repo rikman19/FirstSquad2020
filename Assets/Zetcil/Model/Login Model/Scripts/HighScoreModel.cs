@@ -73,7 +73,7 @@ namespace Zetcil
             TargetHighScore.Clear();
 
             string[] HighScoreView = RequestOutput.CurrentValue.Split('|');
-            for (int i = 0; i < HighScoreView.Length-1; i++)
+            for (int i = 0; i < HighScoreView.Length - 1; i++)
             {
                 CHighScore newscore = new CHighScore();
 
