@@ -150,7 +150,7 @@ namespace Zetcil
 
                 if (SessionName.CurrentValue == newscore.ID)
                 {
-                    Debug.Log(newscore.Score);
+                    //Debug.Log(newscore.Score);
                 }
 
                 //-- input to server

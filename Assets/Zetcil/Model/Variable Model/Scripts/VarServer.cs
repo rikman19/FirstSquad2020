@@ -23,6 +23,7 @@ namespace Zetcil
         [Header("Server Settings")]
         public VarString LoginURL;
         public VarString RegisterURL;
+        public VarString UpdateScoreURL;
         public VarString HighScoreURL;
 
         [Header("Server Event Settings")]
@@ -66,13 +67,18 @@ namespace Zetcil
             string contenttag2 = "\t\t" + RegisterURL.CurrentValue + "\n";
             string closetag2 = "\t</" + "RegisterURL" + ">\n";
 
-            string opentag3 = "\t<" + "HighScoreURL" + ">\n";
-            string contenttag3 = "\t\t" + HighScoreURL.CurrentValue + "\n";
-            string closetag3 = "\t</" + "HighScoreURL" + ">\n";
+            string opentag3 = "\t<" + "UpdateScoreURL" + ">\n";
+            string contenttag3 = "\t\t" + UpdateScoreURL.CurrentValue + "\n";
+            string closetag3 = "\t</" + "UpdateScoreURL" + ">\n";
+
+            string opentag4 = "\t<" + "HighScoreURL" + ">\n";
+            string contenttag4 = "\t\t" + HighScoreURL.CurrentValue + "\n";
+            string closetag4 = "\t</" + "HighScoreURL" + ">\n";
 
             result = opentag1 + contenttag1 + closetag1 +
                      opentag2 + contenttag2 + closetag2 +
-                     opentag3 + contenttag3 + closetag3;
+                     opentag3 + contenttag3 + closetag3 +
+                     opentag4 + contenttag4 + closetag4;
             result = header + result + footer;
 
             string DirName = GetDirectory(ConfigDirectory);
@@ -99,6 +105,9 @@ namespace Zetcil
 
                 xmlnodelist = xmldoc.GetElementsByTagName("RegisterURL");
                 RegisterURL.CurrentValue = xmlnodelist.Item(0).InnerText.Trim();
+
+                xmlnodelist = xmldoc.GetElementsByTagName("UpdateScoreURL");
+                UpdateScoreURL.CurrentValue = xmlnodelist.Item(0).InnerText.Trim();
 
                 xmlnodelist = xmldoc.GetElementsByTagName("HighScoreURL");
                 HighScoreURL.CurrentValue = xmlnodelist.Item(0).InnerText.Trim();
