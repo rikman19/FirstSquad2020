@@ -3100,6 +3100,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BadRandomizer (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4814292450446417392, guid: b8b1c7e52079d87488694555608a2aa6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4814292450446417394, guid: b8b1c7e52079d87488694555608a2aa6,
         type: 3}
       propertyPath: Interval
@@ -6829,6 +6834,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Randomizer.Gold Point Level 3-04
       objectReference: {fileID: 0}
+    - target: {fileID: 6332728478774933569, guid: d6a273a3e860c884191ffb8e57aa090b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6332728478774933628, guid: d6a273a3e860c884191ffb8e57aa090b,
         type: 3}
       propertyPath: Speed
@@ -8346,6 +8356,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Randomizer.Gold Point Level 3-06
       objectReference: {fileID: 0}
+    - target: {fileID: 6332728478774933569, guid: 24e6c9acf1b82904785f4663f0b0829a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6332728478774933628, guid: 24e6c9acf1b82904785f4663f0b0829a,
         type: 3}
       propertyPath: Speed
@@ -9420,6 +9435,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Randomizer.Gold Point Level 3-03
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332728478774933569, guid: 654f7cb7190d9fb4b89f1ebbdbaa785a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6332728478774933628, guid: 654f7cb7190d9fb4b89f1ebbdbaa785a,
         type: 3}
@@ -10880,6 +10900,140 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1326217750}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1342789180
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4905989823285082004}
+    m_Modifications:
+    - target: {fileID: 1149845335477332266, guid: 3358e759bfdd20b419c78a9eef02877d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1149845335477332266, guid: 3358e759bfdd20b419c78a9eef02877d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 1149845335477332266, guid: 3358e759bfdd20b419c78a9eef02877d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -228.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1149845335477332266, guid: 3358e759bfdd20b419c78a9eef02877d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1149845335477332266, guid: 3358e759bfdd20b419c78a9eef02877d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1149845335477332266, guid: 3358e759bfdd20b419c78a9eef02877d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1149845335477332266, guid: 3358e759bfdd20b419c78a9eef02877d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1149845335477332266, guid: 3358e759bfdd20b419c78a9eef02877d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1149845335477332266, guid: 3358e759bfdd20b419c78a9eef02877d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1149845335477332266, guid: 3358e759bfdd20b419c78a9eef02877d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1149845335477332266, guid: 3358e759bfdd20b419c78a9eef02877d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1149845335477332297, guid: 3358e759bfdd20b419c78a9eef02877d,
+        type: 3}
+      propertyPath: TargetPrefab.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1149845335477332297, guid: 3358e759bfdd20b419c78a9eef02877d,
+        type: 3}
+      propertyPath: TargetPrefab.Array.data[4]
+      value: 
+      objectReference: {fileID: 1457344260801646624, guid: e2b88451be4e9ec469c0d3422b23e3c7,
+        type: 3}
+    - target: {fileID: 1149845335477332297, guid: 3358e759bfdd20b419c78a9eef02877d,
+        type: 3}
+      propertyPath: TargetPrefab.Array.data[5]
+      value: 
+      objectReference: {fileID: 9183210950744602036, guid: 5ae04f7edcb03a646919e4971853bb02,
+        type: 3}
+    - target: {fileID: 1149845335477332297, guid: 3358e759bfdd20b419c78a9eef02877d,
+        type: 3}
+      propertyPath: TargetPrefab.Array.data[6]
+      value: 
+      objectReference: {fileID: 7726642963088680536, guid: e8442d24f0f707a45ab6e0fb840697d2,
+        type: 3}
+    - target: {fileID: 1149845335477332297, guid: 3358e759bfdd20b419c78a9eef02877d,
+        type: 3}
+      propertyPath: TargetPrefab.Array.data[7]
+      value: 
+      objectReference: {fileID: 7726642963088680536, guid: e8442d24f0f707a45ab6e0fb840697d2,
+        type: 3}
+    - target: {fileID: 1149845335477332297, guid: 3358e759bfdd20b419c78a9eef02877d,
+        type: 3}
+      propertyPath: TargetPrefab.Array.data[8]
+      value: 
+      objectReference: {fileID: 2656457649801772563, guid: d1bc5d69bc9dfa64ea46160fa167f2c5,
+        type: 3}
+    - target: {fileID: 1149845335477332297, guid: 3358e759bfdd20b419c78a9eef02877d,
+        type: 3}
+      propertyPath: TargetPrefab.Array.data[0]
+      value: 
+      objectReference: {fileID: 4186489666080455712, guid: d75c585b9e27dee4192e97933c7f92fe,
+        type: 3}
+    - target: {fileID: 1149845335477332297, guid: 3358e759bfdd20b419c78a9eef02877d,
+        type: 3}
+      propertyPath: TargetPrefab.Array.data[1]
+      value: 
+      objectReference: {fileID: 8043695779487427891, guid: e5942da2007b686479c6beb2448e8675,
+        type: 3}
+    - target: {fileID: 1149845335477332297, guid: 3358e759bfdd20b419c78a9eef02877d,
+        type: 3}
+      propertyPath: TargetPrefab.Array.data[2]
+      value: 
+      objectReference: {fileID: 4098471051898353729, guid: 8e5d05bbf6aa9cf48a8690bc23cfef5c,
+        type: 3}
+    - target: {fileID: 1149845335477332297, guid: 3358e759bfdd20b419c78a9eef02877d,
+        type: 3}
+      propertyPath: TargetPrefab.Array.data[3]
+      value: 
+      objectReference: {fileID: 5736688139032195825, guid: dd89490b1a9bab04e98b24cf7af34e31,
+        type: 3}
+    - target: {fileID: 1149845335477332311, guid: 3358e759bfdd20b419c78a9eef02877d,
+        type: 3}
+      propertyPath: m_Name
+      value: SpawnRandomizer
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3358e759bfdd20b419c78a9eef02877d, type: 3}
+--- !u!4 &1342789181 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1149845335477332266, guid: 3358e759bfdd20b419c78a9eef02877d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1342789180}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1429758366
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12003,6 +12157,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Randomizer.Gold Point Level 3-05
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332728478774933569, guid: 038381b2b61360144aeb58b12b9c1ca4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6332728478774933628, guid: 038381b2b61360144aeb58b12b9c1ca4,
         type: 3}
@@ -15038,6 +15197,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Randomizer.Gold Point Level 3-01
       objectReference: {fileID: 0}
+    - target: {fileID: 6332728478774933569, guid: 7fa734eceb5355848bb6c28d0392b5bd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6332728478774933628, guid: 7fa734eceb5355848bb6c28d0392b5bd,
         type: 3}
       propertyPath: Speed
@@ -15117,6 +15281,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BadRandomizer (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814292450446417392, guid: b8b1c7e52079d87488694555608a2aa6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4814292450446417394, guid: b8b1c7e52079d87488694555608a2aa6,
         type: 3}
@@ -15426,6 +15595,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Randomizer.Gold Point Level 3-02
       objectReference: {fileID: 0}
+    - target: {fileID: 6332728478774933569, guid: 0d95d633acf353c45aa5f118ebdbf338,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6332728478774933628, guid: 0d95d633acf353c45aa5f118ebdbf338,
         type: 3}
       propertyPath: Speed
@@ -15659,6 +15833,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BadRandomizer
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814292450446417392, guid: b8b1c7e52079d87488694555608a2aa6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4814292450446417394, guid: b8b1c7e52079d87488694555608a2aa6,
         type: 3}
@@ -24068,7 +24247,7 @@ ParticleSystem:
 --- !u!199 &4905989822503570765
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 3
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -27404,6 +27583,7 @@ Transform:
   - {fileID: 477541476}
   - {fileID: 4905989823275851115}
   - {fileID: 4905989823908899017}
+  - {fileID: 1342789181}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -34014,7 +34194,7 @@ ParticleSystem:
 --- !u!199 &4905989823560973163
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 3
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}

@@ -14,6 +14,7 @@ namespace Zetcil
     public class SpawnController : MonoBehaviour
     {
         public enum CEnumAfterSpawn { StillWithParent, DetachFromParent }
+        public enum CPrefabList { Static, Increment, Decrement, Random  }
 
         [Space(10)]
         public bool isEnabled;
@@ -22,7 +23,13 @@ namespace Zetcil
         public GlobalVariable.CInvokeType InvokeType;
 
         [Header("Prefab Settings")]
-        public GameObject TargetPrefab;
+        public CPrefabList PrefabList;
+        public List<GameObject> TargetPrefab;
+        public int CurrentIndex;
+
+        [Header("Spawn Settings")]
+        [ReadOnly] public int TotalSpawn;
+        public int MaxSpawn;
 
         [Header("Position Settings")]
         public Transform TargetPosition;
@@ -50,6 +57,9 @@ namespace Zetcil
             }
         }
 
+        public void SetEnabled(bool aValue) { 
+            isEnabled = aValue;
+        }
         void Start()
         {
             if (isEnabled)
@@ -88,19 +98,164 @@ namespace Zetcil
 
         public void InvokeSpawnController()
         {
-            if (usingParent)
+            if (isEnabled && TotalSpawn < MaxSpawn)
             {
-                GameObject temp = Instantiate(TargetPrefab, TargetPosition.position, TargetPosition.rotation, TargetParent);
-                if (AfterSpawn == CEnumAfterSpawn.DetachFromParent)
+                if (usingParent)
                 {
-                    temp.transform.parent = null;
+                    if (PrefabList == CPrefabList.Static)
+                    {
+                        GameObject static_temp = Instantiate(TargetPrefab[CurrentIndex], TargetPosition.position, TargetPosition.rotation, TargetParent);
+                        if (AfterSpawn == CEnumAfterSpawn.DetachFromParent)
+                        {
+                            static_temp.transform.parent = null;
+                        }
+                        if (static_temp == null) Debug.Log("Spawn Failed.");
+
+                        if (AfterSpawn == CEnumAfterSpawn.DetachFromParent)
+                        {
+                            static_temp.transform.parent = null;
+                        }
+                        if (static_temp == null) Debug.Log("Spawn Failed.");
+                    }
+
+                    if (PrefabList == CPrefabList.Increment)
+                    {
+                        GameObject static_temp = Instantiate(TargetPrefab[CurrentIndex], TargetPosition.position, TargetPosition.rotation, TargetParent);
+                        if (AfterSpawn == CEnumAfterSpawn.DetachFromParent)
+                        {
+                            static_temp.transform.parent = null;
+                        }
+                        if (static_temp == null) Debug.Log("Spawn Failed.");
+                        CurrentIndex++;
+                        if (CurrentIndex >= TargetPrefab.Count)
+                        {
+                            CurrentIndex = 0;
+                        }
+
+                        if (AfterSpawn == CEnumAfterSpawn.DetachFromParent)
+                        {
+                            static_temp.transform.parent = null;
+                        }
+                        if (static_temp == null) Debug.Log("Spawn Failed.");
+                    }
+
+                    if (PrefabList == CPrefabList.Decrement)
+                    {
+                        CurrentIndex--;
+                        if (CurrentIndex <= 0)
+                        {
+                            CurrentIndex = TargetPrefab.Count - 1;
+                        }
+                        GameObject static_temp = Instantiate(TargetPrefab[CurrentIndex], TargetPosition.position, TargetPosition.rotation, TargetParent);
+                        if (AfterSpawn == CEnumAfterSpawn.DetachFromParent)
+                        {
+                            static_temp.transform.parent = null;
+                        }
+                        if (static_temp == null) Debug.Log("Spawn Failed.");
+
+                        if (AfterSpawn == CEnumAfterSpawn.DetachFromParent)
+                        {
+                            static_temp.transform.parent = null;
+                        }
+                        if (static_temp == null) Debug.Log("Spawn Failed.");
+                    }
+
+                    if (PrefabList == CPrefabList.Random)
+                    {
+                        CurrentIndex = Random.Range(0, TargetPrefab.Count - 1);
+                        GameObject static_temp = Instantiate(TargetPrefab[CurrentIndex], TargetPosition.position, TargetPosition.rotation, TargetParent);
+                        if (AfterSpawn == CEnumAfterSpawn.DetachFromParent)
+                        {
+                            static_temp.transform.parent = null;
+                        }
+                        if (static_temp == null) Debug.Log("Spawn Failed.");
+
+                        if (AfterSpawn == CEnumAfterSpawn.DetachFromParent)
+                        {
+                            static_temp.transform.parent = null;
+                        }
+                        if (static_temp == null) Debug.Log("Spawn Failed.");
+                    }
                 }
-                if (temp == null) Debug.Log("Spawn Failed.");
-            }
-            else
-            {
-                GameObject temp = Instantiate(TargetPrefab, TargetPosition.position, TargetPosition.rotation);
-                if (temp == null) Debug.Log("Spawn Failed.");
+                else
+                {
+                    if (PrefabList == CPrefabList.Static)
+                    {
+                        GameObject static_temp = Instantiate(TargetPrefab[CurrentIndex], TargetPosition.position, TargetPosition.rotation);
+                        if (AfterSpawn == CEnumAfterSpawn.DetachFromParent)
+                        {
+                            static_temp.transform.parent = null;
+                        }
+                        if (static_temp == null) Debug.Log("Spawn Failed.");
+
+                        if (AfterSpawn == CEnumAfterSpawn.DetachFromParent)
+                        {
+                            static_temp.transform.parent = null;
+                        }
+                        if (static_temp == null) Debug.Log("Spawn Failed.");
+                    }
+
+                    if (PrefabList == CPrefabList.Increment)
+                    {
+                        GameObject static_temp = Instantiate(TargetPrefab[CurrentIndex], TargetPosition.position, TargetPosition.rotation);
+                        if (AfterSpawn == CEnumAfterSpawn.DetachFromParent)
+                        {
+                            static_temp.transform.parent = null;
+                        }
+                        if (static_temp == null) Debug.Log("Spawn Failed.");
+                        CurrentIndex++;
+                        if (CurrentIndex >= TargetPrefab.Count)
+                        {
+                            CurrentIndex = 0;
+                        }
+
+                        if (AfterSpawn == CEnumAfterSpawn.DetachFromParent)
+                        {
+                            static_temp.transform.parent = null;
+                        }
+                        if (static_temp == null) Debug.Log("Spawn Failed.");
+                    }
+
+                    if (PrefabList == CPrefabList.Decrement)
+                    {
+                        CurrentIndex--;
+                        if (CurrentIndex <= 0)
+                        {
+                            CurrentIndex = TargetPrefab.Count - 1;
+                        }
+                        GameObject static_temp = Instantiate(TargetPrefab[CurrentIndex], TargetPosition.position, TargetPosition.rotation);
+                        if (AfterSpawn == CEnumAfterSpawn.DetachFromParent)
+                        {
+                            static_temp.transform.parent = null;
+                        }
+                        if (static_temp == null) Debug.Log("Spawn Failed.");
+
+                        if (AfterSpawn == CEnumAfterSpawn.DetachFromParent)
+                        {
+                            static_temp.transform.parent = null;
+                        }
+                        if (static_temp == null) Debug.Log("Spawn Failed.");
+                    }
+
+                    if (PrefabList == CPrefabList.Random)
+                    {
+                        CurrentIndex = Random.Range(0, TargetPrefab.Count - 1);
+                        GameObject static_temp = Instantiate(TargetPrefab[CurrentIndex], TargetPosition.position, TargetPosition.rotation);
+                        if (AfterSpawn == CEnumAfterSpawn.DetachFromParent)
+                        {
+                            static_temp.transform.parent = null;
+                        }
+                        if (static_temp == null) Debug.Log("Spawn Failed.");
+
+                        if (AfterSpawn == CEnumAfterSpawn.DetachFromParent)
+                        {
+                            static_temp.transform.parent = null;
+                        }
+                        if (static_temp == null) Debug.Log("Spawn Failed.");
+                    }
+                }
+
+                TotalSpawn++;
             }
         }
 

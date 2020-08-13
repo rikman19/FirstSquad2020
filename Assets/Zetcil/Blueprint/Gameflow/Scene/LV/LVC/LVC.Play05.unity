@@ -1716,6 +1716,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Randomizer.Gold Point Level 4-05
       objectReference: {fileID: 0}
+    - target: {fileID: 6332728478774933569, guid: 01897ccd6ccf3804a8416529e8bf4508,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6332728478774933628, guid: 01897ccd6ccf3804a8416529e8bf4508,
         type: 3}
       propertyPath: IncrementPosition.x
@@ -2334,6 +2339,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BadRandomizer (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4814292450446417392, guid: b8b1c7e52079d87488694555608a2aa6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4814292450446417394, guid: b8b1c7e52079d87488694555608a2aa6,
         type: 3}
       propertyPath: Interval
@@ -2797,6 +2807,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Randomizer.Gold Point Level 4-04
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332728478774933569, guid: ddd47d09c143bb2448106aaee5781e0f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6332728478774933628, guid: ddd47d09c143bb2448106aaee5781e0f,
         type: 3}
@@ -7704,6 +7719,140 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963311702}
   m_CullTransparentMesh: 0
+--- !u!1001 &967858992
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4905989823285082004}
+    m_Modifications:
+    - target: {fileID: 1149845335477332266, guid: 3358e759bfdd20b419c78a9eef02877d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1149845335477332266, guid: 3358e759bfdd20b419c78a9eef02877d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 1149845335477332266, guid: 3358e759bfdd20b419c78a9eef02877d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -228.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1149845335477332266, guid: 3358e759bfdd20b419c78a9eef02877d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1149845335477332266, guid: 3358e759bfdd20b419c78a9eef02877d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1149845335477332266, guid: 3358e759bfdd20b419c78a9eef02877d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1149845335477332266, guid: 3358e759bfdd20b419c78a9eef02877d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1149845335477332266, guid: 3358e759bfdd20b419c78a9eef02877d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1149845335477332266, guid: 3358e759bfdd20b419c78a9eef02877d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1149845335477332266, guid: 3358e759bfdd20b419c78a9eef02877d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1149845335477332266, guid: 3358e759bfdd20b419c78a9eef02877d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1149845335477332297, guid: 3358e759bfdd20b419c78a9eef02877d,
+        type: 3}
+      propertyPath: TargetPrefab.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1149845335477332297, guid: 3358e759bfdd20b419c78a9eef02877d,
+        type: 3}
+      propertyPath: TargetPrefab.Array.data[4]
+      value: 
+      objectReference: {fileID: 2403147781445288008, guid: 43a43b9f3713b8c4287e5c1f7d2adccc,
+        type: 3}
+    - target: {fileID: 1149845335477332297, guid: 3358e759bfdd20b419c78a9eef02877d,
+        type: 3}
+      propertyPath: TargetPrefab.Array.data[5]
+      value: 
+      objectReference: {fileID: 2558219532587005498, guid: e1c412fb4409b6d41ada19482718740c,
+        type: 3}
+    - target: {fileID: 1149845335477332297, guid: 3358e759bfdd20b419c78a9eef02877d,
+        type: 3}
+      propertyPath: TargetPrefab.Array.data[6]
+      value: 
+      objectReference: {fileID: 7959030120503541169, guid: 0987f26c80fbd29449fca044cbfcc2bd,
+        type: 3}
+    - target: {fileID: 1149845335477332297, guid: 3358e759bfdd20b419c78a9eef02877d,
+        type: 3}
+      propertyPath: TargetPrefab.Array.data[7]
+      value: 
+      objectReference: {fileID: 4188932273656315182, guid: 997e06cc0c0ee2b45b17f882fcaeec28,
+        type: 3}
+    - target: {fileID: 1149845335477332297, guid: 3358e759bfdd20b419c78a9eef02877d,
+        type: 3}
+      propertyPath: TargetPrefab.Array.data[8]
+      value: 
+      objectReference: {fileID: 5280764879421615001, guid: 5542f9084ecd1c645928423a91946cbf,
+        type: 3}
+    - target: {fileID: 1149845335477332297, guid: 3358e759bfdd20b419c78a9eef02877d,
+        type: 3}
+      propertyPath: TargetPrefab.Array.data[0]
+      value: 
+      objectReference: {fileID: 1118491650574346048, guid: 3d351baed1ce8f648865ef6797f1d80f,
+        type: 3}
+    - target: {fileID: 1149845335477332297, guid: 3358e759bfdd20b419c78a9eef02877d,
+        type: 3}
+      propertyPath: TargetPrefab.Array.data[1]
+      value: 
+      objectReference: {fileID: 958470558929661135, guid: fee25031816efa949b5bc7b2e91a5bde,
+        type: 3}
+    - target: {fileID: 1149845335477332297, guid: 3358e759bfdd20b419c78a9eef02877d,
+        type: 3}
+      propertyPath: TargetPrefab.Array.data[2]
+      value: 
+      objectReference: {fileID: 37693512934918275, guid: 25d1d667e48f95a489d613db957169f0,
+        type: 3}
+    - target: {fileID: 1149845335477332297, guid: 3358e759bfdd20b419c78a9eef02877d,
+        type: 3}
+      propertyPath: TargetPrefab.Array.data[3]
+      value: 
+      objectReference: {fileID: 2558219532587005498, guid: e1c412fb4409b6d41ada19482718740c,
+        type: 3}
+    - target: {fileID: 1149845335477332311, guid: 3358e759bfdd20b419c78a9eef02877d,
+        type: 3}
+      propertyPath: m_Name
+      value: SpawnRandomizer
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3358e759bfdd20b419c78a9eef02877d, type: 3}
+--- !u!4 &967858993 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1149845335477332266, guid: 3358e759bfdd20b419c78a9eef02877d,
+    type: 3}
+  m_PrefabInstance: {fileID: 967858992}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &973873668
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9664,6 +9813,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Randomizer.Gold Point Level 4-02
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332728478774933569, guid: 266abc3290e0cd04bb9cc7f4fdb02309,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6332728478774933628, guid: 266abc3290e0cd04bb9cc7f4fdb02309,
         type: 3}
@@ -11668,6 +11822,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BadRandomizer (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4814292450446417392, guid: b8b1c7e52079d87488694555608a2aa6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4814292450446417394, guid: b8b1c7e52079d87488694555608a2aa6,
         type: 3}
       propertyPath: Interval
@@ -12010,6 +12169,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Randomizer.Gold Point Level 4-01
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332728478774933569, guid: b5dedb2d59fc3e94a9be1f0391faabcd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6332728478774933628, guid: b5dedb2d59fc3e94a9be1f0391faabcd,
         type: 3}
@@ -14114,6 +14278,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Randomizer.Gold Point Level 4-03
       objectReference: {fileID: 0}
+    - target: {fileID: 6332728478774933569, guid: 0384b1fa3e040fd458d41c9bb12afc74,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6332728478774933628, guid: 0384b1fa3e040fd458d41c9bb12afc74,
         type: 3}
       propertyPath: Speed
@@ -15570,6 +15739,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Randomizer.Gold Point Level 4-06
       objectReference: {fileID: 0}
+    - target: {fileID: 6332728478774933569, guid: c7cf2fea3f62a354a85a817f67b26aed,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6332728478774933628, guid: c7cf2fea3f62a354a85a817f67b26aed,
         type: 3}
       propertyPath: Speed
@@ -15659,6 +15833,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BadRandomizer
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814292450446417392, guid: b8b1c7e52079d87488694555608a2aa6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4814292450446417394, guid: b8b1c7e52079d87488694555608a2aa6,
         type: 3}
@@ -24068,7 +24247,7 @@ ParticleSystem:
 --- !u!199 &4905989822503570765
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 3
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -27404,6 +27583,7 @@ Transform:
   - {fileID: 1502977479}
   - {fileID: 4905989823275851115}
   - {fileID: 4905989823908899017}
+  - {fileID: 967858993}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -34014,7 +34194,7 @@ ParticleSystem:
 --- !u!199 &4905989823560973163
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 3
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}

@@ -10,11 +10,15 @@ namespace Zetcil
         public SerializedProperty
             isEnabled,
             InvokeType,
+            PrefabList,
             TargetPrefab,
+            CurrentIndex,
             TargetPosition,
             usingParent,
             TargetParent,
             AfterSpawn,
+            TotalSpawn,
+            MaxSpawn,
             usingDelay,
             Delay,
             usingInterval,
@@ -26,12 +30,16 @@ namespace Zetcil
             // Setup the SerializedProperties
             isEnabled = serializedObject.FindProperty("isEnabled");
             InvokeType = serializedObject.FindProperty("InvokeType");
+            PrefabList = serializedObject.FindProperty("PrefabList");
             TargetPrefab = serializedObject.FindProperty("TargetPrefab");
+            CurrentIndex = serializedObject.FindProperty("CurrentIndex");
             TargetPosition = serializedObject.FindProperty("TargetPosition");
             usingParent = serializedObject.FindProperty("usingParent");
             TargetParent = serializedObject.FindProperty("TargetParent");
             usingDelay = serializedObject.FindProperty("usingDelay");
             AfterSpawn = serializedObject.FindProperty("AfterSpawn");
+            TotalSpawn = serializedObject.FindProperty("TotalSpawn");
+            MaxSpawn = serializedObject.FindProperty("MaxSpawn");
             Delay = serializedObject.FindProperty("Delay");
             usingInterval = serializedObject.FindProperty("usingInterval");
             Interval = serializedObject.FindProperty("Interval");
@@ -50,11 +58,16 @@ namespace Zetcil
 
                 EditorGUILayout.PropertyField(InvokeType);
 
+                EditorGUILayout.PropertyField(PrefabList);
                 EditorGUILayout.PropertyField(TargetPrefab);
-                if (TargetPrefab.objectReferenceValue == null)
+                if (TargetPrefab.arraySize == 0)
                 {
                     EditorGUILayout.HelpBox("Required Field(s) Null / None", MessageType.Error);
                 }
+
+                EditorGUILayout.PropertyField(CurrentIndex);
+                EditorGUILayout.PropertyField(TotalSpawn);
+                EditorGUILayout.PropertyField(MaxSpawn);
 
                 EditorGUILayout.PropertyField(TargetPosition);
                 if (TargetPosition.objectReferenceValue == null)
