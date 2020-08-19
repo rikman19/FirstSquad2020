@@ -10132,6 +10132,11 @@ PrefabInstance:
       propertyPath: LoadDelay
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 2924814000606565591, guid: 116d0754d293d354ebad0e6704156a5a,
+        type: 3}
+      propertyPath: PrintDebugConsole
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3359612701038247641, guid: 116d0754d293d354ebad0e6704156a5a,
         type: 3}
       propertyPath: LoadDelay
