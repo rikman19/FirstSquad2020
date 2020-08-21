@@ -14599,7 +14599,7 @@ PrefabInstance:
     - target: {fileID: 114672249731406648, guid: f8683de3ff62e954aab26abbdfa42f36,
         type: 3}
       propertyPath: GameObjectEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114672249731406648, guid: f8683de3ff62e954aab26abbdfa42f36,
         type: 3}
@@ -14619,22 +14619,22 @@ PrefabInstance:
     - target: {fileID: 114672249731406648, guid: f8683de3ff62e954aab26abbdfa42f36,
         type: 3}
       propertyPath: GameObjectEvent.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: SaveSession
+      value: SetSessionValue
       objectReference: {fileID: 0}
     - target: {fileID: 114672249731406648, guid: f8683de3ff62e954aab26abbdfa42f36,
         type: 3}
       propertyPath: GameObjectEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: Zetcil.VarInteger, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 114672249731406648, guid: f8683de3ff62e954aab26abbdfa42f36,
         type: 3}
       propertyPath: GameObjectEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 129306390}
     - target: {fileID: 114672249731406648, guid: f8683de3ff62e954aab26abbdfa42f36,
         type: 3}
       propertyPath: GameObjectEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114672249731406648, guid: f8683de3ff62e954aab26abbdfa42f36,
         type: 3}
@@ -14654,17 +14654,17 @@ PrefabInstance:
     - target: {fileID: 114672249731406648, guid: f8683de3ff62e954aab26abbdfa42f36,
         type: 3}
       propertyPath: GameObjectEvent.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
-      value: SetSessionValue
+      value: SaveSession
       objectReference: {fileID: 0}
     - target: {fileID: 114672249731406648, guid: f8683de3ff62e954aab26abbdfa42f36,
         type: 3}
       propertyPath: GameObjectEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: Zetcil.VarInteger, Assembly-CSharp
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 114672249731406648, guid: f8683de3ff62e954aab26abbdfa42f36,
         type: 3}
       propertyPath: GameObjectEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_StringArgument
-      value: LVC.Play02.Star
+      value: LVC.Play03.Star
       objectReference: {fileID: 0}
     - target: {fileID: 114672249731406648, guid: f8683de3ff62e954aab26abbdfa42f36,
         type: 3}
@@ -14755,7 +14755,7 @@ PrefabInstance:
         type: 3}
       propertyPath: GameObjectEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 129306390}
+      objectReference: {fileID: 0}
     - target: {fileID: 114672249731406648, guid: f8683de3ff62e954aab26abbdfa42f36,
         type: 3}
       propertyPath: GameObjectEvent.m_PersistentCalls.m_Calls.Array.data[6].m_Mode

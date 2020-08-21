@@ -37,7 +37,9 @@ namespace Zetcil
             Increment_prop,
             ThreeSecondComplete,
             usingAttributeSettings,
-            AttributeSettings
+            AttributeSettings,
+            StarSender,
+            StarReceiver
             ;
 
         void OnEnable()
@@ -55,6 +57,9 @@ namespace Zetcil
             floatSender_prop = serializedObject.FindProperty("FloatSender");
             boolSender_prop = serializedObject.FindProperty("BoolSender");
             stringSender_prop = serializedObject.FindProperty("StringSender");
+
+            StarSender = serializedObject.FindProperty("StarSender");
+            StarReceiver = serializedObject.FindProperty("StarReceiver");
 
             timeReceiver_prop = serializedObject.FindProperty("TimeReceiver");
             healthReceiver_prop = serializedObject.FindProperty("HealthReceiver");
@@ -128,6 +133,9 @@ namespace Zetcil
                         EditorGUILayout.PropertyField(boolReceiver_prop, new GUIContent("BoolReceiver"));
                         break;
                 }
+
+                EditorGUILayout.PropertyField(StarSender, new GUIContent("StarSender"));
+                EditorGUILayout.PropertyField(StarReceiver, new GUIContent("StarReceiver"));
 
                 EditorGUILayout.PropertyField(Increment_prop, true);
                 EditorGUILayout.PropertyField(ThreeSecondComplete, true);

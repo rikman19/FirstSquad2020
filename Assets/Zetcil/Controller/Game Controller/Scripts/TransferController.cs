@@ -37,6 +37,10 @@ namespace Zetcil
         public VarBoolean BoolSender;
         public VarBoolean BoolReceiver;
 
+        [Header("Symbol Variable")]
+        public VarInteger StarSender;
+        public VarInteger StarReceiver;
+
         [Header("Increment Settings")]
         public float Increment;
         public bool ThreeSecondComplete;

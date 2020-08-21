@@ -108,6 +108,11 @@ namespace Zetcil
         public bool usingInterval;
         public float Interval;
 
+        public void SetEnabled(bool aValue)
+        {
+            isEnabled = aValue;
+        }
+
         // Use this for initialization
         void Awake()
         {
@@ -208,468 +213,469 @@ namespace Zetcil
                         }
                     }
                 }
-            }
 
-            if (VariableType == GlobalVariable.CVariableType.healthVar)
-            {
-                if (isChecking)
+                if (VariableType == GlobalVariable.CVariableType.healthVar)
                 {
-                    if (usingEqualCondition && EqualConditionValue == HealthVariables.CurrentValue.ToString())
+                    if (isChecking)
                     {
-                        if (!isEqualInvoke)
+                        if (usingEqualCondition && EqualConditionValue == HealthVariables.CurrentValue.ToString())
                         {
-                            isEqualInvoke = true;
-                            EqualConditionEvent.Invoke();
-                            Invoke("EqualCooldown", 1);
-                            if (!RepeatChecking)
+                            if (!isEqualInvoke)
                             {
-                                isChecking = false;
+                                isEqualInvoke = true;
+                                EqualConditionEvent.Invoke();
+                                Invoke("EqualCooldown", 1);
+                                if (!RepeatChecking)
+                                {
+                                    isChecking = false;
+                                }
                             }
                         }
-                    }
-                    if (usingNotEqualCondition && NotEqualConditionValue != HealthVariables.CurrentValue.ToString())
-                    {
-                        if (!isNotEqualInvoke)
+                        if (usingNotEqualCondition && NotEqualConditionValue != HealthVariables.CurrentValue.ToString())
                         {
-                            isNotEqualInvoke = true;
-                            NotEqualConditionEvent.Invoke();
-                            Invoke("NotEqualCooldown", 1);
-                            if (!RepeatChecking)
+                            if (!isNotEqualInvoke)
                             {
-                                isChecking = false;
+                                isNotEqualInvoke = true;
+                                NotEqualConditionEvent.Invoke();
+                                Invoke("NotEqualCooldown", 1);
+                                if (!RepeatChecking)
+                                {
+                                    isChecking = false;
+                                }
                             }
                         }
-                    }
-                    if (usingGreaterCondition && int.Parse(GreaterConditionValue) < HealthVariables.CurrentValue)
-                    {
-                        if (!isGreaterInvoke)
+                        if (usingGreaterCondition && int.Parse(GreaterConditionValue) < HealthVariables.CurrentValue)
                         {
-                            isGreaterInvoke = true;
-                            GreaterConditionEvent.Invoke();
-                            Invoke("GreaterCooldown", 1);
-                            if (!RepeatChecking)
+                            if (!isGreaterInvoke)
                             {
-                                isChecking = false;
+                                isGreaterInvoke = true;
+                                GreaterConditionEvent.Invoke();
+                                Invoke("GreaterCooldown", 1);
+                                if (!RepeatChecking)
+                                {
+                                    isChecking = false;
+                                }
                             }
                         }
-                    }
-                    if (usingLessCondition && int.Parse(LessConditionValue) > HealthVariables.CurrentValue)
-                    {
-                        if (!isLessInvoke)
+                        if (usingLessCondition && int.Parse(LessConditionValue) > HealthVariables.CurrentValue)
                         {
-                            isLessInvoke = true;
-                            LessConditionEvent.Invoke();
-                            Invoke("LessCooldown", 1);
-                            if (!RepeatChecking)
+                            if (!isLessInvoke)
                             {
-                                isChecking = false;
-                            }
-                        }
-                    }
-                }
-            }
-
-            if (VariableType == GlobalVariable.CVariableType.manaVar)
-            {
-                if (isChecking)
-                {
-                    if (usingEqualCondition && EqualConditionValue == ManaVariables.CurrentValue.ToString())
-                    {
-                        if (!isEqualInvoke)
-                        {
-                            isEqualInvoke = true;
-                            EqualConditionEvent.Invoke();
-                            Invoke("EqualCooldown", 1);
-                            if (!RepeatChecking)
-                            {
-                                isChecking = false;
-                            }
-                        }
-                    }
-                    if (usingNotEqualCondition && NotEqualConditionValue != ManaVariables.CurrentValue.ToString())
-                    {
-                        if (!isNotEqualInvoke)
-                        {
-                            isNotEqualInvoke = true;
-                            NotEqualConditionEvent.Invoke();
-                            Invoke("NotEqualCooldown", 1);
-                            if (!RepeatChecking)
-                            {
-                                isChecking = false;
-                            }
-                        }
-                    }
-                    if (usingGreaterCondition && int.Parse(GreaterConditionValue) < ManaVariables.CurrentValue)
-                    {
-                        if (!isGreaterInvoke)
-                        {
-                            isGreaterInvoke = true;
-                            GreaterConditionEvent.Invoke();
-                            Invoke("GreaterCooldown", 1);
-                            if (!RepeatChecking)
-                            {
-                                isChecking = false;
-                            }
-                        }
-                    }
-                    if (usingLessCondition && int.Parse(LessConditionValue) > ManaVariables.CurrentValue)
-                    {
-                        if (!isLessInvoke)
-                        {
-                            isLessInvoke = true;
-                            LessConditionEvent.Invoke();
-                            Invoke("LessCooldown", 1);
-                            if (!RepeatChecking)
-                            {
-                                isChecking = false;
+                                isLessInvoke = true;
+                                LessConditionEvent.Invoke();
+                                Invoke("LessCooldown", 1);
+                                if (!RepeatChecking)
+                                {
+                                    isChecking = false;
+                                }
                             }
                         }
                     }
                 }
 
-            }
+                if (VariableType == GlobalVariable.CVariableType.manaVar)
+                {
+                    if (isChecking)
+                    {
+                        if (usingEqualCondition && EqualConditionValue == ManaVariables.CurrentValue.ToString())
+                        {
+                            if (!isEqualInvoke)
+                            {
+                                isEqualInvoke = true;
+                                EqualConditionEvent.Invoke();
+                                Invoke("EqualCooldown", 1);
+                                if (!RepeatChecking)
+                                {
+                                    isChecking = false;
+                                }
+                            }
+                        }
+                        if (usingNotEqualCondition && NotEqualConditionValue != ManaVariables.CurrentValue.ToString())
+                        {
+                            if (!isNotEqualInvoke)
+                            {
+                                isNotEqualInvoke = true;
+                                NotEqualConditionEvent.Invoke();
+                                Invoke("NotEqualCooldown", 1);
+                                if (!RepeatChecking)
+                                {
+                                    isChecking = false;
+                                }
+                            }
+                        }
+                        if (usingGreaterCondition && int.Parse(GreaterConditionValue) < ManaVariables.CurrentValue)
+                        {
+                            if (!isGreaterInvoke)
+                            {
+                                isGreaterInvoke = true;
+                                GreaterConditionEvent.Invoke();
+                                Invoke("GreaterCooldown", 1);
+                                if (!RepeatChecking)
+                                {
+                                    isChecking = false;
+                                }
+                            }
+                        }
+                        if (usingLessCondition && int.Parse(LessConditionValue) > ManaVariables.CurrentValue)
+                        {
+                            if (!isLessInvoke)
+                            {
+                                isLessInvoke = true;
+                                LessConditionEvent.Invoke();
+                                Invoke("LessCooldown", 1);
+                                if (!RepeatChecking)
+                                {
+                                    isChecking = false;
+                                }
+                            }
+                        }
+                    }
 
-            if (VariableType == GlobalVariable.CVariableType.expVar)
-            {
-                if (isChecking)
+                }
+
+                if (VariableType == GlobalVariable.CVariableType.expVar)
                 {
-                    if (usingEqualCondition && EqualConditionValue == ExpVariables.CurrentValue.ToString())
+                    if (isChecking)
                     {
-                        if (!isEqualInvoke)
+                        if (usingEqualCondition && EqualConditionValue == ExpVariables.CurrentValue.ToString())
                         {
-                            isEqualInvoke = true;
-                            EqualConditionEvent.Invoke();
-                            Invoke("EqualCooldown", 1);
-                            if (!RepeatChecking)
+                            if (!isEqualInvoke)
                             {
-                                isChecking = false;
+                                isEqualInvoke = true;
+                                EqualConditionEvent.Invoke();
+                                Invoke("EqualCooldown", 1);
+                                if (!RepeatChecking)
+                                {
+                                    isChecking = false;
+                                }
+                            }
+                        }
+                        if (usingNotEqualCondition && NotEqualConditionValue != ExpVariables.CurrentValue.ToString())
+                        {
+                            if (!isNotEqualInvoke)
+                            {
+                                isNotEqualInvoke = true;
+                                NotEqualConditionEvent.Invoke();
+                                Invoke("NotEqualCooldown", 1);
+                                if (!RepeatChecking)
+                                {
+                                    isChecking = false;
+                                }
+                            }
+                        }
+                        if (usingGreaterCondition && int.Parse(GreaterConditionValue) < ExpVariables.CurrentValue)
+                        {
+                            if (!isGreaterInvoke)
+                            {
+                                isGreaterInvoke = true;
+                                GreaterConditionEvent.Invoke();
+                                Invoke("GreaterCooldown", 1);
+                                if (!RepeatChecking)
+                                {
+                                    isChecking = false;
+                                }
+                            }
+                        }
+                        if (usingLessCondition && int.Parse(LessConditionValue) > ExpVariables.CurrentValue)
+                        {
+                            if (!isLessInvoke)
+                            {
+                                isLessInvoke = true;
+                                LessConditionEvent.Invoke();
+                                Invoke("LessCooldown", 1);
+                                if (!RepeatChecking)
+                                {
+                                    isChecking = false;
+                                }
                             }
                         }
                     }
-                    if (usingNotEqualCondition && NotEqualConditionValue != ExpVariables.CurrentValue.ToString())
+
+                }
+
+                if (VariableType == GlobalVariable.CVariableType.scoreVar)
+                {
+                    if (isChecking)
                     {
-                        if (!isNotEqualInvoke)
+                        if (usingEqualCondition && EqualConditionValue == ScoreVariables.CurrentValue.ToString())
                         {
-                            isNotEqualInvoke = true;
-                            NotEqualConditionEvent.Invoke();
-                            Invoke("NotEqualCooldown", 1);
-                            if (!RepeatChecking)
+                            if (!isEqualInvoke)
                             {
-                                isChecking = false;
+                                isEqualInvoke = true;
+                                EqualConditionEvent.Invoke();
+                                Invoke("EqualCooldown", 1);
+                                if (!RepeatChecking)
+                                {
+                                    isChecking = false;
+                                }
                             }
                         }
-                    }
-                    if (usingGreaterCondition && int.Parse(GreaterConditionValue) < ExpVariables.CurrentValue)
-                    {
-                        if (!isGreaterInvoke)
+                        if (usingNotEqualCondition && NotEqualConditionValue != ScoreVariables.CurrentValue.ToString())
                         {
-                            isGreaterInvoke = true;
-                            GreaterConditionEvent.Invoke();
-                            Invoke("GreaterCooldown", 1);
-                            if (!RepeatChecking)
+                            if (!isNotEqualInvoke)
                             {
-                                isChecking = false;
+                                isNotEqualInvoke = true;
+                                NotEqualConditionEvent.Invoke();
+                                Invoke("NotEqualCooldown", 1);
+                                if (!RepeatChecking)
+                                {
+                                    isChecking = false;
+                                }
                             }
                         }
-                    }
-                    if (usingLessCondition && int.Parse(LessConditionValue) > ExpVariables.CurrentValue)
-                    {
-                        if (!isLessInvoke)
+                        if (usingGreaterCondition && int.Parse(GreaterConditionValue) < ScoreVariables.CurrentValue)
                         {
-                            isLessInvoke = true;
-                            LessConditionEvent.Invoke();
-                            Invoke("LessCooldown", 1);
-                            if (!RepeatChecking)
+                            if (!isGreaterInvoke)
                             {
-                                isChecking = false;
+                                isGreaterInvoke = true;
+                                GreaterConditionEvent.Invoke();
+                                Invoke("GreaterCooldown", 1);
+                                if (!RepeatChecking)
+                                {
+                                    isChecking = false;
+                                }
+                            }
+                        }
+                        if (usingLessCondition && int.Parse(LessConditionValue) > ScoreVariables.CurrentValue)
+                        {
+                            if (!isLessInvoke)
+                            {
+                                isLessInvoke = true;
+                                LessConditionEvent.Invoke();
+                                Invoke("LessCooldown", 1);
+                                if (!RepeatChecking)
+                                {
+                                    isChecking = false;
+                                }
                             }
                         }
                     }
                 }
 
-            }
+                if (VariableType == GlobalVariable.CVariableType.intVar)
+                {
+                    if (isChecking)
+                    {
+                        if (usingEqualCondition && EqualConditionValue == IntVariables.CurrentValue.ToString())
+                        {
+                            if (!isEqualInvoke)
+                            {
+                                isEqualInvoke = true;
+                                EqualConditionEvent.Invoke();
+                                Invoke("EqualCooldown", 1);
+                                if (!RepeatChecking)
+                                {
+                                    isChecking = false;
+                                }
+                            }
+                        }
+                        if (usingNotEqualCondition && NotEqualConditionValue != IntVariables.CurrentValue.ToString())
+                        {
+                            if (!isNotEqualInvoke)
+                            {
+                                isNotEqualInvoke = true;
+                                NotEqualConditionEvent.Invoke();
+                                Invoke("NotEqualCooldown", 1);
+                                if (!RepeatChecking)
+                                {
+                                    isChecking = false;
+                                }
+                            }
+                        }
+                        if (usingGreaterCondition && int.Parse(GreaterConditionValue) < IntVariables.CurrentValue)
+                        {
+                            if (!isGreaterInvoke)
+                            {
+                                isGreaterInvoke = true;
+                                GreaterConditionEvent.Invoke();
+                                Invoke("GreaterCooldown", 1);
+                                if (!RepeatChecking)
+                                {
+                                    isChecking = false;
+                                }
+                            }
+                        }
+                        if (usingLessCondition && int.Parse(LessConditionValue) > IntVariables.CurrentValue)
+                        {
+                            if (!isLessInvoke)
+                            {
+                                isLessInvoke = true;
+                                LessConditionEvent.Invoke();
+                                Invoke("LessCooldown", 1);
+                                if (!RepeatChecking)
+                                {
+                                    isChecking = false;
+                                }
+                            }
+                        }
+                    }
+                }
 
-            if (VariableType == GlobalVariable.CVariableType.scoreVar)
-            {
-                if (isChecking)
+                if (VariableType == GlobalVariable.CVariableType.floatVar)
                 {
-                    if (usingEqualCondition && EqualConditionValue == ScoreVariables.CurrentValue.ToString())
+                    if (isChecking)
                     {
-                        if (!isEqualInvoke)
+                        if (usingEqualCondition && EqualConditionValue == FloatVariables.CurrentValue.ToString())
                         {
-                            isEqualInvoke = true;
-                            EqualConditionEvent.Invoke();
-                            Invoke("EqualCooldown", 1);
-                            if (!RepeatChecking)
+                            if (!isEqualInvoke)
                             {
-                                isChecking = false;
+                                isEqualInvoke = true;
+                                EqualConditionEvent.Invoke();
+                                Invoke("EqualCooldown", 1);
+                                if (!RepeatChecking)
+                                {
+                                    isChecking = false;
+                                }
                             }
                         }
-                    }
-                    if (usingNotEqualCondition && NotEqualConditionValue != ScoreVariables.CurrentValue.ToString())
-                    {
-                        if (!isNotEqualInvoke)
+                        if (usingNotEqualCondition && NotEqualConditionValue != FloatVariables.CurrentValue.ToString())
                         {
-                            isNotEqualInvoke = true;
-                            NotEqualConditionEvent.Invoke();
-                            Invoke("NotEqualCooldown", 1);
-                            if (!RepeatChecking)
+                            if (!isNotEqualInvoke)
                             {
-                                isChecking = false;
+                                isNotEqualInvoke = true;
+                                NotEqualConditionEvent.Invoke();
+                                Invoke("NotEqualCooldown", 1);
+                                if (!RepeatChecking)
+                                {
+                                    isChecking = false;
+                                }
                             }
                         }
-                    }
-                    if (usingGreaterCondition && int.Parse(GreaterConditionValue) < ScoreVariables.CurrentValue)
-                    {
-                        if (!isGreaterInvoke)
+                        if (usingGreaterCondition && int.Parse(GreaterConditionValue) < FloatVariables.CurrentValue)
                         {
-                            isGreaterInvoke = true;
-                            GreaterConditionEvent.Invoke();
-                            Invoke("GreaterCooldown", 1);
-                            if (!RepeatChecking)
+                            if (!isGreaterInvoke)
                             {
-                                isChecking = false;
+                                isGreaterInvoke = true;
+                                GreaterConditionEvent.Invoke();
+                                Invoke("GreaterCooldown", 1);
+                                if (!RepeatChecking)
+                                {
+                                    isChecking = false;
+                                }
                             }
                         }
-                    }
-                    if (usingLessCondition && int.Parse(LessConditionValue) > ScoreVariables.CurrentValue)
-                    {
-                        if (!isLessInvoke)
+                        if (usingLessCondition && int.Parse(LessConditionValue) > FloatVariables.CurrentValue)
                         {
-                            isLessInvoke = true;
-                            LessConditionEvent.Invoke();
-                            Invoke("LessCooldown", 1);
-                            if (!RepeatChecking)
+                            if (!isLessInvoke)
                             {
-                                isChecking = false;
+                                isLessInvoke = true;
+                                LessConditionEvent.Invoke();
+                                Invoke("LessCooldown", 1);
+                                if (!RepeatChecking)
+                                {
+                                    isChecking = false;
+                                }
                             }
                         }
                     }
                 }
-            }
 
-            if (VariableType == GlobalVariable.CVariableType.intVar)
-            {
-                if (isChecking)
+                if (VariableType == GlobalVariable.CVariableType.stringVar)
                 {
-                    if (usingEqualCondition && EqualConditionValue == IntVariables.CurrentValue.ToString())
+                    if (isChecking)
                     {
-                        if (!isEqualInvoke)
+                        if (usingEqualCondition && EqualConditionValue == StringVariables.CurrentValue.ToString())
                         {
-                            isEqualInvoke = true;
-                            EqualConditionEvent.Invoke();
-                            Invoke("EqualCooldown", 1);
-                            if (!RepeatChecking)
+                            if (!isEqualInvoke)
                             {
-                                isChecking = false;
+                                isEqualInvoke = true;
+                                EqualConditionEvent.Invoke();
+                                Invoke("EqualCooldown", 1);
+                                if (!RepeatChecking)
+                                {
+                                    isChecking = false;
+                                }
                             }
                         }
-                    }
-                    if (usingNotEqualCondition && NotEqualConditionValue != IntVariables.CurrentValue.ToString())
-                    {
-                        if (!isNotEqualInvoke)
+                        if (usingNotEqualCondition && NotEqualConditionValue != StringVariables.CurrentValue.ToString())
                         {
-                            isNotEqualInvoke = true;
-                            NotEqualConditionEvent.Invoke();
-                            Invoke("NotEqualCooldown", 1);
-                            if (!RepeatChecking)
+                            if (!isNotEqualInvoke)
                             {
-                                isChecking = false;
-                            }
-                        }
-                    }
-                    if (usingGreaterCondition && int.Parse(GreaterConditionValue) < IntVariables.CurrentValue)
-                    {
-                        if (!isGreaterInvoke)
-                        {
-                            isGreaterInvoke = true;
-                            GreaterConditionEvent.Invoke();
-                            Invoke("GreaterCooldown", 1);
-                            if (!RepeatChecking)
-                            {
-                                isChecking = false;
-                            }
-                        }
-                    }
-                    if (usingLessCondition && int.Parse(LessConditionValue) > IntVariables.CurrentValue)
-                    {
-                        if (!isLessInvoke)
-                        {
-                            isLessInvoke = true;
-                            LessConditionEvent.Invoke();
-                            Invoke("LessCooldown", 1);
-                            if (!RepeatChecking)
-                            {
-                                isChecking = false;
+                                isNotEqualInvoke = true;
+                                NotEqualConditionEvent.Invoke();
+                                Invoke("NotEqualCooldown", 1);
+                                if (!RepeatChecking)
+                                {
+                                    isChecking = false;
+                                }
                             }
                         }
                     }
                 }
-            }
 
-            if (VariableType == GlobalVariable.CVariableType.floatVar)
-            {
-                if (isChecking)
+                if (VariableType == GlobalVariable.CVariableType.boolVar)
                 {
-                    if (usingEqualCondition && EqualConditionValue == FloatVariables.CurrentValue.ToString())
+                    if (isChecking)
                     {
-                        if (!isEqualInvoke)
+                        if (usingTrueCondition && TrueConditionValue == BoolVariables.CurrentValue)
                         {
-                            isEqualInvoke = true;
-                            EqualConditionEvent.Invoke();
-                            Invoke("EqualCooldown", 1);
-                            if (!RepeatChecking)
+                            if (!isTrueInvoke)
                             {
-                                isChecking = false;
+                                isTrueInvoke = true;
+                                TrueConditionEvent.Invoke();
+                                Invoke("TrueCooldown", 1);
+                                if (!RepeatChecking)
+                                {
+                                    isChecking = false;
+                                }
                             }
                         }
-                    }
-                    if (usingNotEqualCondition && NotEqualConditionValue != FloatVariables.CurrentValue.ToString())
-                    {
-                        if (!isNotEqualInvoke)
+                        if (usingFalseCondition && FalseConditionValue == BoolVariables.CurrentValue)
                         {
-                            isNotEqualInvoke = true;
-                            NotEqualConditionEvent.Invoke();
-                            Invoke("NotEqualCooldown", 1);
-                            if (!RepeatChecking)
+                            if (!isFalseInvoke)
                             {
-                                isChecking = false;
-                            }
-                        }
-                    }
-                    if (usingGreaterCondition && int.Parse(GreaterConditionValue) < FloatVariables.CurrentValue)
-                    {
-                        if (!isGreaterInvoke)
-                        {
-                            isGreaterInvoke = true;
-                            GreaterConditionEvent.Invoke();
-                            Invoke("GreaterCooldown", 1);
-                            if (!RepeatChecking)
-                            {
-                                isChecking = false;
-                            }
-                        }
-                    }
-                    if (usingLessCondition && int.Parse(LessConditionValue) > FloatVariables.CurrentValue)
-                    {
-                        if (!isLessInvoke)
-                        {
-                            isLessInvoke = true;
-                            LessConditionEvent.Invoke();
-                            Invoke("LessCooldown", 1);
-                            if (!RepeatChecking)
-                            {
-                                isChecking = false;
+                                isFalseInvoke = true;
+                                FalseConditionEvent.Invoke();
+                                Invoke("FalseCooldown", 1);
+                                if (!RepeatChecking)
+                                {
+                                    isChecking = false;
+                                }
                             }
                         }
                     }
                 }
-            }
 
-            if (VariableType == GlobalVariable.CVariableType.stringVar)
-            {
-                if (isChecking)
+                if (VariableType == GlobalVariable.CVariableType.objectVar)
                 {
-                    if (usingEqualCondition && EqualConditionValue == StringVariables.CurrentValue.ToString())
+                    if (usingTagEqualCondition && ObjectVariables.CurrentValue && TagEqualConditionValue == ObjectVariables.CurrentValue.tag)
                     {
-                        if (!isEqualInvoke)
+                        if (!isTagEqualInvoke)
                         {
-                            isEqualInvoke = true;
-                            EqualConditionEvent.Invoke();
-                            Invoke("EqualCooldown", 1);
-                            if (!RepeatChecking)
-                            {
-                                isChecking = false;
-                            }
+                            isTagEqualInvoke = true;
+                            TagEqualConditionEvent.Invoke();
+                            Invoke("TagEqualCooldown", 1);
                         }
                     }
-                    if (usingNotEqualCondition && NotEqualConditionValue != StringVariables.CurrentValue.ToString())
+                    if (usingNotTagEqualCondition && ObjectVariables.CurrentValue && NotTagEqualConditionValue != ObjectVariables.CurrentValue.tag)
                     {
-                        if (!isNotEqualInvoke)
+                        if (!isNotTagEqualInvoke)
                         {
-                            isNotEqualInvoke = true;
-                            NotEqualConditionEvent.Invoke();
-                            Invoke("NotEqualCooldown", 1);
-                            if (!RepeatChecking)
-                            {
-                                isChecking = false;
-                            }
+                            isNotTagEqualInvoke = true;
+                            NotTagEqualConditionEvent.Invoke();
+                            Invoke("NotTagEqualCooldown", 1);
+                        }
+                    }
+                    if (usingNameEqualCondition && ObjectVariables.CurrentValue && NameEqualConditionValue == ObjectVariables.CurrentValue.name)
+                    {
+                        if (!isNameEqualInvoke)
+                        {
+                            isNameEqualInvoke = true;
+                            NameEqualConditionEvent.Invoke();
+                            Invoke("NameEqualCooldown", 1);
+                        }
+                    }
+                    if (usingNotNameEqualCondition && ObjectVariables.CurrentValue && NotNameEqualConditionValue != ObjectVariables.CurrentValue.name)
+                    {
+                        if (!isNotNameEqualInvoke)
+                        {
+                            isNotNameEqualInvoke = true;
+                            NotNameEqualConditionEvent.Invoke();
+                            Invoke("NotNameEqualCooldown", 1);
                         }
                     }
                 }
-            }
 
-            if (VariableType == GlobalVariable.CVariableType.boolVar)
-            {
-                if (isChecking)
-                {
-                    if (usingTrueCondition && TrueConditionValue == BoolVariables.CurrentValue)
-                    {
-                        if (!isTrueInvoke)
-                        {
-                            isTrueInvoke = true;
-                            TrueConditionEvent.Invoke();
-                            Invoke("TrueCooldown", 1);
-                            if (!RepeatChecking)
-                            {
-                                isChecking = false;
-                            }
-                        }
-                    }
-                    if (usingFalseCondition && FalseConditionValue == BoolVariables.CurrentValue)
-                    {
-                        if (!isFalseInvoke)
-                        {
-                            isFalseInvoke = true;
-                            FalseConditionEvent.Invoke();
-                            Invoke("FalseCooldown", 1);
-                            if (!RepeatChecking)
-                            {
-                                isChecking = false;
-                            }
-                        }
-                    }
-                }
-            }
-
-            if (VariableType == GlobalVariable.CVariableType.objectVar)
-            {
-                if (usingTagEqualCondition && ObjectVariables.CurrentValue && TagEqualConditionValue == ObjectVariables.CurrentValue.tag)
-                {
-                    if (!isTagEqualInvoke)
-                    {
-                        isTagEqualInvoke = true;
-                        TagEqualConditionEvent.Invoke();
-                        Invoke("TagEqualCooldown", 1);
-                    }
-                }
-                if (usingNotTagEqualCondition && ObjectVariables.CurrentValue && NotTagEqualConditionValue != ObjectVariables.CurrentValue.tag)
-                {
-                    if (!isNotTagEqualInvoke)
-                    {
-                        isNotTagEqualInvoke = true;
-                        NotTagEqualConditionEvent.Invoke();
-                        Invoke("NotTagEqualCooldown", 1);
-                    }
-                }
-                if (usingNameEqualCondition && ObjectVariables.CurrentValue && NameEqualConditionValue == ObjectVariables.CurrentValue.name)
-                {
-                    if (!isNameEqualInvoke)
-                    {
-                        isNameEqualInvoke = true;
-                        NameEqualConditionEvent.Invoke();
-                        Invoke("NameEqualCooldown", 1);
-                    }
-                }
-                if (usingNotNameEqualCondition && ObjectVariables.CurrentValue && NotNameEqualConditionValue != ObjectVariables.CurrentValue.name)
-                {
-                    if (!isNotNameEqualInvoke)
-                    {
-                        isNotNameEqualInvoke = true;
-                        NotNameEqualConditionEvent.Invoke();
-                        Invoke("NotNameEqualCooldown", 1);
-                    }
-                }
             }
         }
 
