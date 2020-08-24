@@ -76,7 +76,7 @@ namespace Zetcil
         {
             if (isFound)
             {
-                this.gameObject.transform.Translate(Vector3.up * );
+                this.gameObject.transform.Translate(Vector3.up * Time.deltaTime);
             }
         }
     }
