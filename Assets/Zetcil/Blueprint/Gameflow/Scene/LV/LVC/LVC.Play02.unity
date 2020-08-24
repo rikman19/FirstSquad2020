@@ -2978,8 +2978,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 401342905}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.23, y: 0.25, z: 13.02}
-  m_LocalScale: {x: 1.407224, y: 1.5272242, z: 1}
+  m_LocalPosition: {x: -0.047, y: -0.012, z: 13.02}
+  m_LocalScale: {x: 1.547265, y: 1.4544357, z: 1}
   m_Children: []
   m_Father: {fileID: 403534742}
   m_RootOrder: 0
@@ -3023,7 +3023,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2f8f42a24ac89d24fa3ef6b731e5dbe7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: eb96dcfb1882ba64f90e58e8a4954ade, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9571,6 +9571,11 @@ PrefabInstance:
         type: 3}
       propertyPath: LoadDelay
       value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1838845860431085740, guid: 116d0754d293d354ebad0e6704156a5a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2732633573026963918, guid: 116d0754d293d354ebad0e6704156a5a,
         type: 3}
